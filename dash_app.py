@@ -3,37 +3,39 @@
 
 # Run this app with `python dash_app.py` and visit http://127.0.0.1:8050/ in your web browser.
 
-import dash
+from dash import dash, dcc, html
 import dash_bootstrap_components as dbc
+import pandas as pd
 from dash import html
+import plotly_express as px
+import plotly.graph_objs as go
+import plotly.io as pio
+pio.renderers.default = "notebook"
+from pathlib import Path
+
+file_path = Path(__file__).parent.joinpath('Data','cleaned_dataset.csv')
+df_country = pd.read_csv(file_path)
+
+fig_bar = px.bar(df_country, x="Country Name", y="2015")
+
 
 external_stylesheets = [dbc.themes.BOOTSTRAP]
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
+
 app.layout = html.Div(children=[
-    html.H1(children='Europe Data Platform'),
+    html.Img(src="https://upload.wikimedia.org/wikipedia/commons/8/84/European_Commission.svg",
+             alt="EU Commission Logo"),
+    html.H1(children='Europe Data Platform', style={'textAlign': 'center'}),
+    html.H1(children='"Doing Business" Performance', style={'textAlign': 'center'}),
 
-html.H1(children='"Doing Business" Performance'),
-
-
-html.Img(
-    src="https://upload.wikimedia.org/wikipedia/commons/8/84/European_Commission.svg",
-    alt="EU Commission Logo"),
-
-html.Table(
-    [
-        html.Tr([
-            html.Td(children='row 1 col 1'),
-            html.Td(children='row 1 col 2')
-        ]),
-        html.Tr([
-            html.Td(children='row 2 col 1'),
-            html.Td(children='row 2 col 2')
-        ])
-    ]
-),
+dcc.Graph(
+    id='spend-bar-graph',
+    figure=fig_bar
+)
 ])
+
 
 
 if __name__ == '__main__':
