@@ -16,7 +16,7 @@ from pathlib import Path
 file_path = Path(__file__).parent.joinpath('Data','cleaned_dataset.csv')
 df_country = pd.read_csv(file_path)
 
-fig_bar = px.bar(df_country, x="Country Name", y="2015")
+fig_bar = px.bar(df_country, x="Country Name", y="2015", color="Indicator Name", title="Overall Busincess Performance", template="plotly_dark")
 
 
 external_stylesheets = [dbc.themes.BOOTSTRAP]
