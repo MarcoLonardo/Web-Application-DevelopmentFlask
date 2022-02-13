@@ -19,26 +19,10 @@ file_path = Path(__file__).parent.joinpath('Data','prepared_dataset.csv')
 df_country = pd.read_csv(file_path)
 
 # Addressing Question 1: Creating a Dataframe to group overall performance by country
-df = df_country.groupby(['Country Name','Country Code',
+df = df_country.groupby(['Country Name','Country Code','Year'
                         ])[['Overall Score']].mean()
 df.reset_index(inplace=True)
 print(df[:5])
-
-# Plotting the results with a choropleth graph
-fig_bar = px.bar(df_country, x="Country Name", y="Year", title="Overall Business Performance")
-fig = px.choropleth(
-    data_frame=df,
-    locations='Country Code',
-    color="Overall Score",
-    range_color=(75,85),
-    scope="europe",
-    color_continuous_scale=px.colors.diverging.RdYlGn,
-    hover_name="Country Name"
-    )
-
-# Updating the layout and hiding countries not politically involved in the EU
-fig.update_layout(height=650, width=900)
-fig.update_geos(fitbounds="locations", visible=False)
 
 
 external_stylesheets = [dbc.themes.LUX]
@@ -71,7 +55,6 @@ dbc.Row(dbc.Col(html.P(""))),
         dbc.Col(width=3, children=[
             dcc.Dropdown(id="select_year",
                          options=[
-                             {"label":"2015","value":2015},
                              {"label":"2016","value":2016},
                              {"label":"2017","value":2017},
                              {"label":"2018","value":2018},
@@ -91,7 +74,7 @@ dbc.Row(dbc.Col(html.P(""))),
         dbc.Col(width=9,  children=[
             dcc.Graph(
                 id='overall_score_chart',
-                figure=fig)
+                figure={})
         ])
     ])
 ])
@@ -108,6 +91,23 @@ def update_graph (option_selected):
     print(type(option_selected))
 
     container = " Year selected: {}".format(option_selected)
+    df_filtering = df.copy()
+    df_filtering = df_filtering[df_filtering["Year"] == option_selected]
+
+    # Plotting the results with a choropleth graph
+    fig = px.choropleth(
+        data_frame=df_filtering,
+        locations='Country Code',
+        color="Overall Score",
+        range_color=(75, 85),
+        scope="europe",
+        color_continuous_scale=px.colors.diverging.RdYlGn,
+        hover_name="Country Name"
+    )
+
+    # Updating the layout and hiding countries not politically involved in the EU
+    fig.update_layout(height=650, width=900)
+    fig.update_geos(fitbounds="locations", visible=False)
 
     return container, fig
 
