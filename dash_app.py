@@ -89,6 +89,7 @@ dbc.Row(dbc.Col(html.P(""))),
 def update_graph (option_selected):
     df_filtering1 = df.copy()
     df_filtering1 = df_filtering1[df_filtering1["Year"] == option_selected]
+    df_filtering1 = df_filtering1.round(decimals=1)
     card = dbc.Card(className="bg-dark text-light", children=[
         dbc.CardBody([
             html.H4(" Year selected: {}".format(option_selected), className="card-text text-light"),
