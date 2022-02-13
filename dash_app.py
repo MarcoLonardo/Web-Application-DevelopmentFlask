@@ -25,6 +25,16 @@ df = df_country.groupby(['Year'
 df.reset_index(inplace=True)
 print(df[:5])
 
+# Reading the cleaned and prepared dataset from the Data directory
+file_path = Path(__file__).parent.joinpath('Data','prepared_dataset1.csv')
+df_performance = pd.read_csv(file_path)
+
+fig2 = px.scatter(df_performance, x="Score", y="Overall Score", animation_frame="Year", animation_group="Country Name",
+                 size="Score", color="Indicator", hover_name="Country Name", facet_col="Indicator",
+            size_max=12, range_x=[0,105], range_y=[0,105])
+
+fig2.update_layout(height=650, width=1400)
+
 external_stylesheets = [dbc.themes.LUX]
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
@@ -67,24 +77,45 @@ dbc.Row(dbc.Col(html.P(""))),
             html.Br(),
             html.Div(id="stats-card")
 
-
-
         ]),
         # Add the second column here. This is for the figure.
         dbc.Col(width=9,  children=[
             dcc.Graph(
                 id='overall_score_chart',
                 figure={})
+]),
+dbc.Row(dbc.Col(html.P(""))),
+     dbc.Row([
+         html.P('col 1'),
+            dcc.Dropdown(id="select_country",
+                         options=[
+                             {"label":"2016","value":2016},
+                             {"label":"2017","value":2017},
+                             {"label":"2018","value":2018},
+                             {"label":"2019","value":2019},
+                             {"label":"2020","value":2020}],
+                             multi=False,
+                             value=2020,
+                         style={'width':'50%'}),
+            # Div that will later contain a bootstrap card format showing the stats.
+            html.Br(),
+            html.Div(id="country_selection_panel"),
+            dcc.Graph(
+                id='indicator_chart',
+                figure=fig2),
+
+
         ])
     ])
 ])
 
 
+
 @app.callback(
-    [Output(component_id='stats-card', component_property='children'),
+            [Output(component_id='stats-card', component_property='children'),
      Output(component_id='overall_score_chart', component_property='figure')],
     [Input(component_id='select_year', component_property='value')]
-)
+        )
 
 def update_graph (option_selected):
     df_filtering1 = df.copy()
@@ -130,6 +161,10 @@ def update_graph (option_selected):
     fig.update_geos(fitbounds="locations", visible=False)
 
     return card, fig
+
+
+
+# Adressing Question 2
 
 
 if __name__ == '__main__':
