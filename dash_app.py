@@ -193,8 +193,6 @@ def update_graph (option_selected):
         )
 
 def update_countries (country_selected):
-    print(country_selected)
-    print(type(country_selected))
     df_performance1 = df_performance[(df_performance["Country Name"].isin(country_selected))]
 
     container = "Selected: {}".format(country_selected)
