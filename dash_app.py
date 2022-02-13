@@ -29,11 +29,7 @@ print(df[:5])
 file_path = Path(__file__).parent.joinpath('Data','prepared_dataset1.csv')
 df_performance = pd.read_csv(file_path)
 
-fig2 = px.scatter(df_performance, x="Score", y="Overall Score", animation_frame="Year", animation_group="Country Name",
-                 size="Score", color="Indicator", hover_name="Country Name", facet_col="Indicator",
-            size_max=12, range_x=[0,105], range_y=[0,105])
 
-fig2.update_layout(height=650, width=1400)
 
 external_stylesheets = [dbc.themes.LUX]
 
@@ -61,6 +57,7 @@ dbc.Row(dbc.Col(html.P(""))),
 
     dbc.Row(dbc.Col(html.P(""))),
     dbc.Row([
+    html.P('Which countries in Europe have performed worse in 2020 and in previous years?'),
         # This is for the London area selector and the statistics panel.
         dbc.Col(width=3, children=[
             dcc.Dropdown(id="select_year",
@@ -86,23 +83,45 @@ dbc.Row(dbc.Col(html.P(""))),
 ]),
 dbc.Row(dbc.Col(html.P(""))),
      dbc.Row([
-         html.P('col 1'),
+         html.P('What problems are each of the countries facing?'),
             dcc.Dropdown(id="select_country",
                          options=[
-                             {"label":"2016","value":2016},
-                             {"label":"2017","value":2017},
-                             {"label":"2018","value":2018},
-                             {"label":"2019","value":2019},
-                             {"label":"2020","value":2020}],
-                             multi=False,
-                             value=2020,
-                         style={'width':'50%'}),
+                             {"label":"Austria","value":"Austria"},
+                             {"label":"Belgium","value":"Belgium"},
+                             {"label":"Cyprus","value":"Cyprus"},
+                             {"label":"Estonia","value":"Estonia"},
+                             {"label":"Finland","value":"Finland"},
+                             {"label":"France","value":"France"},
+                             {"label":"Germany","value":"Germany"},
+                             {"label":"Greece","value":"Greece"},
+                             {"label":"Ireland","value":"Ireland"},
+                             {"label":"Italy","value":"Italy"},
+                             {"label": "Kosovo", "value": "Kosovo"},
+                             {"label": "Latvia", "value": "Latvia"},
+                             {"label": "Lithuania", "value": "Lithuania"},
+                             {"label": "Luxembourg", "value": "Luxembourg"},
+                             {"label": "Malta", "value": "Malta"},
+                             {"label": "Montenegro", "value": "Montenegro"},
+                             {"label": "Netherlands", "value": "Netherlands"},
+                             {"label": "Portugal", "value": "Portugal"},
+                             {"label": "Slovak Republic", "value": "Slovak Republic"},
+                             {"label": "Slovenia", "value": "Slovenia"},
+                             {"label": "Spain", "value": "Spain"}],
+                            value=["Austria","Belgium","Cyprus","Estonia","Finland","France","Germany",
+                                   "Greece","Ireland","Ireland","Italy","Kosovo","Latvia","Lithuania",
+                                   "Luxembourg","Malta","Montenegro","Netherlands","Portugal",
+                                   "Slovak Republic","Slovenia","Slovenia","Spain"],
+                             multi=True,
+                             searchable=True,
+                            clearable=False,
+                            placeholder="select one or multiple countries",
+                             style={'width':'100%'}),
             # Div that will later contain a bootstrap card format showing the stats.
             html.Br(),
-            html.Div(id="country_selection_panel"),
+            html.Div(id="country_selection_panel", children=[]),
             dcc.Graph(
                 id='indicator_chart',
-                figure=fig2),
+                figure={}),
 
 
         ])
@@ -160,12 +179,34 @@ def update_graph (option_selected):
     fig.update_layout(height=650, width=900)
     fig.update_geos(fitbounds="locations", visible=False)
 
+
     return card, fig
 
 
 
 # Adressing Question 2
 
+@app.callback(
+            [Output(component_id='country_selection_panel', component_property='children'),
+             Output(component_id='indicator_chart', component_property='figure')],
+    [Input(component_id='select_country', component_property='value')]
+        )
+
+def update_countries (country_selected):
+    print(country_selected)
+    print(type(country_selected))
+    df_performance1 = df_performance[(df_performance["Country Name"].isin(country_selected))]
+
+    container = "Selected: {}".format(country_selected)
+
+    fig2 = px.scatter(df_performance1, x="Score", y="Overall Score", animation_frame="Year", animation_group="Country Name",
+                 size="Score", color="Indicator", hover_name="Country Name", facet_col="Indicator",
+            size_max=12, range_x=[0,105], range_y=[0,105])
+
+    fig2.update_layout(height=650, width=1400)
+
+
+    return container,fig2
 
 if __name__ == '__main__':
     app.run_server(debug=True)
