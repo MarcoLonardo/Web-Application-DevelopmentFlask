@@ -19,11 +19,11 @@ file_path = Path(__file__).parent.joinpath('Data','prepared_dataset.csv')
 df_country = pd.read_csv(file_path)
 
 # Addressing Question 1: Creating a Dataframe to group overall performance by country
-df = df_country.groupby(['Country Name','Country Code','Year'
-                        ])[['Overall Score']].mean()
+df = df_country.groupby(['Year'
+                        ])[['Getting Credit - Score','Resolving insolvency - Score',
+                         'Starting a business - Score','Trading across borders - Score','Overall Score']].mean()
 df.reset_index(inplace=True)
 print(df[:5])
-
 
 external_stylesheets = [dbc.themes.LUX]
 
@@ -62,7 +62,7 @@ dbc.Row(dbc.Col(html.P(""))),
                              {"label":"2020","value":2020}],
                              multi=False,
                              value=2020,
-                         style={'width':'103%'}),
+                         style={'width':'100%'}),
             # Div that will later contain a bootstrap card format showing the stats.
             html.Br(),
             html.Div(id="stats-card")
@@ -87,11 +87,30 @@ dbc.Row(dbc.Col(html.P(""))),
 )
 
 def update_graph (option_selected):
-    print(option_selected)
-    print(type(option_selected))
-
-    container = " Year selected: {}".format(option_selected)
-    df_filtering = df.copy()
+    df_filtering1 = df.copy()
+    df_filtering1 = df_filtering1[df_filtering1["Year"] == option_selected]
+    card = dbc.Card(className="bg-dark text-light", children=[
+        dbc.CardBody([
+            html.H4(" Year selected: {}".format(option_selected), className="card-text text-light"),
+            html.Br(),
+            html.H6("Getting Credit Average:", className="card-title"),
+            html.H4(df_filtering1['Getting Credit - Score'].tolist(), className="card-text text-light"),
+            html.Br(),
+            html.H6("Resolving insolvency Average:", className="card-title"),
+            html.H4(df_filtering1['Resolving insolvency - Score'].tolist(), className="card-text text-light"),
+            html.Br(),
+            html.H6("Starting a business Average:", className="card-title"),
+            html.H4(df_filtering1['Starting a business - Score'].tolist(), className="card-text text-light"),
+            html.Br(),
+            html.H6("Trading across borders Average:", className="card-title"),
+            html.H4(df_filtering1['Trading across borders - Score'].tolist(), className="card-text text-light"),
+            html.Br(),
+            html.H6("Overall Average:", className="card-title"),
+            html.H4(df_filtering1['Overall Score'].tolist(), className="card-text text-light"),
+            html.Br()
+        ])
+    ])
+    df_filtering = df_country.copy()
     df_filtering = df_filtering[df_filtering["Year"] == option_selected]
 
     # Plotting the results with a choropleth graph
@@ -109,7 +128,7 @@ def update_graph (option_selected):
     fig.update_layout(height=650, width=900)
     fig.update_geos(fitbounds="locations", visible=False)
 
-    return container, fig
+    return card, fig
 
 
 if __name__ == '__main__':
