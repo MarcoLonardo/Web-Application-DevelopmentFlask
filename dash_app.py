@@ -228,13 +228,13 @@ def update_graph (option_selected):
         color="Overall Score",
         range_color=(75, 85),
         scope="europe",
-        color_continuous_scale=px.colors.diverging.RdYlGn,
+        color_continuous_scale=px.colors.diverging.BrBG,
         hover_name="Country Name"
     )
 
     # Updating the layout and hiding countries not politically involved in the EU
     fig.update_layout(height=650, width=900)
-    fig.update_geos(fitbounds="locations", visible=False)
+    fig.update_geos(fitbounds="locations", visible=True)
 
 
     return card, fig
