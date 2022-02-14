@@ -14,6 +14,7 @@ pio.renderers.default = "notebook"
 from pathlib import Path
 from dash import dcc, Input, Output
 
+
 # Reading the cleaned and prepared dataset from the Data directory
 file_path = Path(__file__).parent.joinpath('Data','prepared_dataset.csv')
 df_country = pd.read_csv(file_path)
@@ -26,8 +27,35 @@ df.reset_index(inplace=True)
 print(df[:5])
 
 # Reading the cleaned and prepared dataset from the Data directory
-file_path = Path(__file__).parent.joinpath('Data','prepared_dataset1.csv')
-df_performance = pd.read_csv(file_path)
+file_path2 = Path(__file__).parent.joinpath('Data','prepared_dataset1.csv')
+df_performance = pd.read_csv(file_path2)
+
+
+# Reading the cleaned and prepared dataset from the Data directory
+df_overall = df_performance.copy()
+df_overall = df_overall.drop('Indicator', 1)
+df_overall = df_overall.drop('Score',1)
+df_overall = df_overall.drop_duplicates('Country Name')
+df_overall.to_csv('prepvs_dataset.csv', index=False)
+
+# Reading the cleaned and prepared dataset from the Data directory
+file_path3 = Path(__file__).parent.joinpath('Data','cleaned_dataset_q3.csv')
+df1 = pd.read_csv(file_path3)
+
+# Data Preparation for Icicle
+df_icicle = df1.copy()
+df_icicle=df_icicle.groupby('Country Name').mean().reset_index()
+# Dropping the column year because the Overall Score refers to the 5-Year Avg Performance
+df_icicle = df_icicle.drop('Year',1)
+df_icicle['Currency Unit']='Europe'
+df_icicle.to_csv('prep_dataset.csv', index=False)
+
+
+fig3 = px.icicle(df_icicle, path = [('Currency Unit'),'Country Name'],
+                    values="Score",
+                    color = "Score",
+                    color_continuous_scale='RdBu',
+                    custom_data=['Country Name'])
 
 
 
@@ -57,7 +85,7 @@ dbc.Row(dbc.Col(html.P(""))),
 
     dbc.Row(dbc.Col(html.P(""))),
     dbc.Row([
-    html.P('Which countries in Europe have performed worse in 2020 and in previous years?'),
+    html.P('Which countries in Europe have, on average, performed worse in 2020 and in previous years?'),
         # This is for the London area selector and the statistics panel.
         dbc.Col(width=3, children=[
             dcc.Dropdown(id="select_year",
@@ -124,11 +152,40 @@ dbc.Row(dbc.Col(html.P(""))),
                 figure={}),
 
 
+dbc.Row(dbc.Col(html.P(""))),
+    dbc.Row([
+        html.P('How has overall performance changed by years? And how have specific indicators changed by country'),
+        # This is for the London area selector and the statistics panel.
+        dbc.Col(width=3, children=[
+dcc.Graph(id='my-graph', figure=fig3, clickData=None, hoverData=None,
+                  config={
+                      'staticPlot': False,  # True, False
+                      'scrollZoom': True,  # True, False
+                      'doubleClick': 'reset',  # 'reset', 'autosize' or 'reset+autosize', False
+                      'showTips': False,  # True, False
+                      'displayModeBar': True,  # True, False, 'hover'
+                      'watermark': True,
+                      # 'modeBarButtonsToRemove': ['pan2d','select2d'],
+                  },
+                  className='six columns'
+                  ),
+
+
+
+        ]),
+        # Add the second column here. This is for the figure.
+                dbc.Col(width=9, children=[
+                dcc.Graph(id='pie-graph',
+                figure={}, className='six columns')
         ])
+    ]),
+
+
+        ])
+
     ])
+
 ])
-
-
 
 @app.callback(
             [Output(component_id='stats-card', component_property='children'),
@@ -205,6 +262,32 @@ def update_countries (country_selected):
 
 
     return container,fig2
+
+
+
+# Addressing Question 3
+@app.callback(
+    Output(component_id='pie-graph', component_property='figure'),
+    Input(component_id='my-graph', component_property='hoverData'),
+)
+
+def update_side_graph(hov_data):
+    if hov_data is None:
+        dff = df1[df1["Country Name"] == "empty"]
+        fig4 = px.line(dff, x='Year', y="Score", color="Indicator",
+                      title='Business Performance <br><sup>Select a country on the left to display performance</sup>')
+        return fig4
+
+    else:
+        print(f'hover data: {hov_data}')
+       # print(hov_data['points'][0]['customdata'][0])
+        hov_year = hov_data['points'][0]['label']
+        dff = df1[df1["Country Name"] == hov_year]
+        fig4 = px.line(dff, x='Year', y="Score", color="Indicator",
+                       title=f'Business Performance Indicators for:'
+                             f'{hov_year} <br><sup>Select a country on the left to display performance</sup>')
+        return fig4
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
