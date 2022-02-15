@@ -8,7 +8,7 @@ import plotly.io as pio
 
 pio.renderers.default = "notebook"
 
-# Reading and preparing the dataset for the choropleth (chart 1).
+# Reading and preparing the dataset for the choropleth (visualization 1).
 file_path = Path(__file__).parent.joinpath('Data', 'prepared_dataset.csv')
 df_country = pd.read_csv(file_path)
 df = df_country.groupby(['Year'])[['Getting Credit - Score', 'Resolving insolvency - Score',
@@ -17,7 +17,7 @@ df = df_country.groupby(['Year'])[['Getting Credit - Score', 'Resolving insolven
 df.reset_index(inplace=True)
 print(df[:5])
 
-# Reading the second version of the prepared dataset with different data structure for the scatter map (chart 2)
+# Reading the second version of the prepared dataset with different data structure for the scatter map (visualization 2)
 file_path2 = Path(__file__).parent.joinpath('Data', 'prepared_dataset_v2.csv')
 df_performance = pd.read_csv(file_path2)
 
@@ -27,7 +27,7 @@ df_overall = df_overall.drop('Indicator', 1)
 df_overall = df_overall.drop('Score', 1)
 df_overall = df_overall.drop_duplicates('Country Name')
 
-# Reading the third version of the prepared dataset with different data structure for chart 3
+# Reading the third version of the prepared dataset with different data structure for visualization 3
 file_path3 = Path(__file__).parent.joinpath('Data', 'prepared_dataset_v3.csv')
 df1 = pd.read_csv(file_path3)
 
