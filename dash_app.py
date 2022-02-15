@@ -33,11 +33,14 @@ df1 = pd.read_csv(file_path3)
 
 # Data Preparation for Icicle
 df_icicle = df1.copy()
-# Calculating the average 5-year performance
+# Calculating the average 5-year performance. Based on code written by user Alex on stackoverflow at
+# https://stackoverflow.com/questions/48366506/calculate-new-column-as-the-mean-of-other-columns-pandas/48366525
+# Accessed 11/02/2022
 df_icicle = df_icicle.groupby('Country Name').mean().reset_index()
 # Dropping the column year because the Overall Score refers to the 5-Year Avg Performance
 df_icicle = df_icicle.drop('Year', 1)
-# Creating a new column for the Icicle Root Node
+# Creating a new column for the Icicle Root Node. Based on code written by user EdChum on stackoverflow at
+# https://stackoverflow.com/questions/29517072/add-column-to-dataframe-with-constant-value Accessed 05/02/2022
 df_icicle['Currency Unit'] = 'Europe'
 
 fig3 = px.icicle(df_icicle, path=['Currency Unit', 'Country Name'], values="Score", color="Score",
@@ -189,6 +192,9 @@ def update_on_selection(option_selected):
             html.H4(" Year selected: {}".format(option_selected), className="card-text text-light"),
             html.Br(),
             html.H6("Getting Credit Average:", className="card-title"),
+            # Adapted from code written by user parasmadan15  on GeeksforGeeks at
+            # https://www.geeksforgeeks.org/get-a-list-of-a-particular-column-values-of-a-pandas-dataframe/
+            # Accessed 07/02/2022
             html.H4(df_filtering1['Getting Credit - Score'].tolist(), className="card-text text-light"),
             html.Br(),
             html.H6("Resolving insolvency Average:", className="card-title"),
@@ -234,6 +240,9 @@ def update_on_selection(option_selected):
 )
 # Adding interactivity to the scatter map chart
 def update_countries(country_selected):
+    # Filtering the dataset using the values selected from the multi-select dropdown.
+    # Adapted from code written by user qdumont community.plotly at
+    # https://community.plotly.com/t/callbacks-with-a-drop-down-with-multi-select/11235/5 Accessed 10/02/2022
     df_performance1 = df_performance[(df_performance["Country Name"].isin(country_selected))]
 
     container = "Selected: {}".format(country_selected)
@@ -254,6 +263,9 @@ def update_countries(country_selected):
 )
 # Interactivity to the the line chart: updating the line chart countries on hovering over the countries in the icicle
 def update_line_graph(hov_data):
+    # Filter the dataframe only for the values that have been hovered. Adapted from code written by Coding-with-Adam on
+    # Github at https://github.com/Coding-with-Adam/Dash-by-Plotly/blob/master/Dash%20Components/Graph/dash-graph.py
+    # Accessed 14/02/2022
     if hov_data is None:
         dff = df1[df1["Country Name"] == "empty"]
         fig4 = px.line(dff, x='Year', y="Score", color="Indicator",
@@ -264,6 +276,9 @@ def update_line_graph(hov_data):
         print(f'hover data: {hov_data}')
         hov_year = hov_data['points'][0]['label']
         dff = df1[df1["Country Name"] == hov_year]
+        # Prevent conversion to float. Adapted from code written by AmourK on stackoverflow at
+        # https://stackoverflow.com/questions/48715330/pandas-plotting-x-axis-gets-transformed-to-floats
+        # Accessed 14/02/2022
         dff['Year'] = dff['Year'].astype(str)
         fig4 = px.line(dff, x='Year', y="Score", color="Indicator",
                        title=f'Business Performance Indicators for:'
