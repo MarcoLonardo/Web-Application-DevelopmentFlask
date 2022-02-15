@@ -39,7 +39,16 @@ As described in COMP0035 and considering the personas, we can expect the audienc
 
 ### Visualization 1 - Choropleth Geographic Map
 
+The target audience of this visualization is the European Commission Leadership Team and it aims to provide an intuitive understanding of countries' individual performances. Indeed, this visualization aims to answer the following question: "Which countries have the lowest/highest Overall Score for every year and how does this compare with the European Average?". 
 
+When answering this question, it was important to consider the trade-off in visualization using the visualization wheel https://ryanwingate.com/visualization/guidelines/visualization-wheel/
+![image](https://user-images.githubusercontent.com/64501760/154100878-a3a36c32-78c1-4e3e-9a88-e45523df55b4.png). We can expect The EU Leadership Team's preferences to be far away from engineers and scientists but closer to the ones of journalists. Therefore, visualization 1 will prioritise the following three principles from the Cairo's visualization wheel: decoration, lightness and figuration. Prioritising these aspects also allowed us to ensure that data was accessible and shallow rather than too deep and complex.  https://ryanwingate.com/visualization/guidelines/visualization-wheel/. This is an important aspect becuase deep and complex data can be overwhelming for our target audience and clarity and easy interpretation have been identified as the most convinient communication styles for our personas.
+To address figuration, the chropleth has been identified as one of the most suitable chart for this target audience becuase it provides a pragmatic and intuitive physical representation of Europe's current situation. This type of chart would also adress the audience's needs for conciveness. Indeed, this type of chart does not require particular attention and the differences can be spotted quickly https://maps-for-excel.com/blog/choropleth-map-in-the-analysis-on-the-map/#:~:text=The%20advantages%20of%20a%20choropleth,picture%20in%20a%20comprehensible%20way. There were other geographical maps that would be helful in this scenario (i.e. tile maps). Nevertheless, they would require longitudinal and latutudinal coordinates in our data, whereas outline maps such as choropleth have a seamless integration with the locations variable https://plotly.com/python/plotly-express/#highlevel-features. Another important characteristic for visualization 1 was lightness, therefore it was a key priority to ensure that only the most important information is displayed. For this reason, the regional scope of the chropleth has been reduced to Europe. A statistics card has been added to improve clarity and help the team benchmark performance with the European average. Finally, a continuous and diverging color scale (BrBG) has been applied for a more intuitive narrative regarding positive and negative performance. To improve the decoration aspect, the color scale range have also been set as 75-85. This was an important aspect to avoid misleading visuals https://faculty.ucmerced.edu/jvevea/classes/Spark/readings/Cairo2015_Chapter_GraphicsLiesMisleadingVisuals.pdf becuase keeping a 0-100 range would have indicated a positive performance overall in Europe. 
+
+
+
+      
+  
 
 
 
