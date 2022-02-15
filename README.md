@@ -29,7 +29,8 @@ The three questions that this web app aims to answer are:
 
 
 The target audience of the web application is the EU Commission Leadership Team: a team of experienced leaders specialised in a particular sector (such as: legal, enviromental, economic). An example of the target aundience can be shown with the following persona: Robert Rossi, the Legislative Lead at the EU Commission. 
-https://github.com/ucl-comp0035/coursework-1-MarcoLonardo/files/7507856/Target.Audience.Persona.-.Robert.Rossi.pdf
+
+[Target Audience Persona - Robert Rossi.pdf](https://github.com/ucl-comp0035/coursework-1-MarcoLonardo/files/7507856/Target.Audience.Persona.-.Robert.Rossi.pdf)
 
 As described in COMP0035 and considering the personas, we can expect the audience to be busy individuals accustomed to renown newspapers such as The Economist and the Financial Times. Moreover, it is also to consider that their familiarity with technology is unlikely to be strong. Therefore, the visualizations and the web app has been designed aiming for clarity, consiveness and intuitive filtering features. 
 
