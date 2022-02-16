@@ -5,8 +5,7 @@ Repository Link: https://github.com/ucl-comp0035/comp0034-cw1-i-MarcoLonardo.git
 
 ### Set-up instructions
 
-No particular set-up instructions
-All the requirements should be installed from requirements.txt.
+No particular set-up instructions. All the requirements should be installed from requirements.txt.
 
 ## Explanation and evaluation of the design of the visualizations
 
@@ -25,6 +24,7 @@ Which challenges have the European countries been facing from 2016 to 2020?
 
 Across the four indicators, has the performance of each country been increasing or decreasing from 2016 to 2020?
 The target audience of the web application is the EU Commission Leadership Team: a team of experienced leaders specialising in a particular sector (such as legal, environmental, economic). An example of the target audience can be shown with the following persona: Robert Rossi, the Legislative Lead at the EU Commission.
+
 [Target.Audience.Persona.-.Robert.Rossi (2).pdf](https://github.com/ucl-comp0035/comp0034-cw1-i-MarcoLonardo/files/8079369/Target.Audience.Persona.-.Robert.Rossi.2.pdf)
 
 
