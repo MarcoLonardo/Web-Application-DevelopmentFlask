@@ -44,7 +44,7 @@ df_icicle = df_icicle.drop('Year', 1)
 df_icicle['Currency Unit'] = 'Europe'
 
 fig3 = px.icicle(df_icicle, path=['Currency Unit', 'Country Name'], values="Score", color="Score",
-                 color_continuous_scale='RdBu', custom_data=['Country Name'])
+                 color_continuous_scale='BrBG', range_color=[65, 85], custom_data=['Country Name'])
 
 fig3.update_layout(
     uniformtext=dict(minsize=50), margin=dict(t=50, l=25, r=25, b=25))
@@ -72,7 +72,8 @@ app.layout = dbc.Container(fluid=True, children=[
     # Row 2 for the statistics panel (column 1) and the choropleth (column 2)
     dbc.Row(dbc.Col(html.P(""))),
     dbc.Row([
-        html.P('Which countries in Europe have, on average, performed worse in 2020 and in previous years?'),
+        html.P('Which countries have the lowest/highest Overall Score for every year and how does this '
+               'compare with the European Average?'),
         # Column1 for the statistic panel
         dbc.Col(width=3, children=[
             # Dropdown Selection Panel
@@ -101,7 +102,7 @@ app.layout = dbc.Container(fluid=True, children=[
         # Row 3 for the Scatter Map and the drop-down menu
         dbc.Row(dbc.Col(html.P(""))),
         dbc.Row([
-            html.P('What problems are each of the countries facing?'),
+            html.P('Which challenges have the European countries been facing from 2016 to 2020?'),
             # Dropdown Selection Filter
             dcc.Dropdown(id="select_country",
                          options=[
@@ -146,7 +147,8 @@ app.layout = dbc.Container(fluid=True, children=[
             dbc.Row(dbc.Col(html.P(""))),
             dbc.Row([
                 html.P(
-                    'How has the performance of each country changed across the 4 indicators over the years?'),
+                    'Across the four indicators, has the performance of each country been increasing or '
+                    'decreasing from 2016 to 2020?'),
                 # Column 1 for Icicle filtering chart
                 dbc.Col(width=3, children=[
                     dcc.Graph(id='icicle', figure=fig3, clickData=None, hoverData=None,
@@ -223,7 +225,8 @@ def update_on_selection(option_selected):
         range_color=(75, 85),
         scope="europe",
         color_continuous_scale=px.colors.diverging.BrBG,
-        hover_name="Country Name"
+        hover_name="Country Name",
+        title="Overall Score across Europe"
     )
 
     # Updating the layout and hiding countries not politically involved in the EU
