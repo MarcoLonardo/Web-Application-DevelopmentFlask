@@ -6,6 +6,7 @@
 ### Set-up instructions
 
 No particular set-up instructions. All the requirements should be installed from requirements.txt.
+JSHint and ESHint have been used on Pycharm as linters to identify and address code quality issues
 
 ## Explanation and evaluation of the design of the visualizations
 
