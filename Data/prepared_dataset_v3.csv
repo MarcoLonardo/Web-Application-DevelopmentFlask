@@ -1,0 +1,551 @@
+Country Name,Country Code,Currency Unit,Year,Indicator,Score
+Austria,AUT,Euro,2016,Getting Credit - Score,55
+Austria,AUT,Euro,2016,Resolving insolvency - Score,78.9
+Austria,AUT,Euro,2016,Starting a business - Score,82.8
+Austria,AUT,Euro,2016,Trading across borders - Score,100
+Austria,AUT,Euro,2016,Overall Score,79.2
+Austria,AUT,Euro,2017,Getting Credit - Score,55
+Austria,AUT,Euro,2017,Resolving insolvency - Score,78.9
+Austria,AUT,Euro,2017,Starting a business - Score,83.1
+Austria,AUT,Euro,2017,Trading across borders - Score,100
+Austria,AUT,Euro,2017,Overall Score,79.3
+Austria,AUT,Euro,2018,Getting Credit - Score,55
+Austria,AUT,Euro,2018,Resolving insolvency - Score,77.4
+Austria,AUT,Euro,2018,Starting a business - Score,83.1
+Austria,AUT,Euro,2018,Trading across borders - Score,100
+Austria,AUT,Euro,2018,Overall Score,78.9
+Austria,AUT,Euro,2019,Getting Credit - Score,55
+Austria,AUT,Euro,2019,Resolving insolvency - Score,77.5
+Austria,AUT,Euro,2019,Starting a business - Score,83.2
+Austria,AUT,Euro,2019,Trading across borders - Score,100
+Austria,AUT,Euro,2019,Overall Score,78.9
+Austria,AUT,Euro,2020,Getting Credit - Score,55
+Austria,AUT,Euro,2020,Resolving insolvency - Score,77.4
+Austria,AUT,Euro,2020,Starting a business - Score,83.2
+Austria,AUT,Euro,2020,Trading across borders - Score,100
+Austria,AUT,Euro,2020,Overall Score,78.9
+Belgium,BEL,Euro,2016,Getting Credit - Score,45
+Belgium,BEL,Euro,2016,Resolving insolvency - Score,84
+Belgium,BEL,Euro,2016,Starting a business - Score,91.4
+Belgium,BEL,Euro,2016,Trading across borders - Score,100
+Belgium,BEL,Euro,2016,Overall Score,80.1
+Belgium,BEL,Euro,2017,Getting Credit - Score,45
+Belgium,BEL,Euro,2017,Resolving insolvency - Score,84.3
+Belgium,BEL,Euro,2017,Starting a business - Score,91.4
+Belgium,BEL,Euro,2017,Trading across borders - Score,100
+Belgium,BEL,Euro,2017,Overall Score,80.2
+Belgium,BEL,Euro,2018,Getting Credit - Score,45
+Belgium,BEL,Euro,2018,Resolving insolvency - Score,81.5
+Belgium,BEL,Euro,2018,Starting a business - Score,91.4
+Belgium,BEL,Euro,2018,Trading across borders - Score,100
+Belgium,BEL,Euro,2018,Overall Score,79.5
+Belgium,BEL,Euro,2019,Getting Credit - Score,65
+Belgium,BEL,Euro,2019,Resolving insolvency - Score,83.9
+Belgium,BEL,Euro,2019,Starting a business - Score,91.4
+Belgium,BEL,Euro,2019,Trading across borders - Score,100
+Belgium,BEL,Euro,2019,Overall Score,85.1
+Belgium,BEL,Euro,2020,Getting Credit - Score,65
+Belgium,BEL,Euro,2020,Resolving insolvency - Score,84.1
+Belgium,BEL,Euro,2020,Starting a business - Score,92.3
+Belgium,BEL,Euro,2020,Trading across borders - Score,100
+Belgium,BEL,Euro,2020,Overall Score,85.4
+Cyprus,CYP,Euro,2016,Getting Credit - Score,65
+Cyprus,CYP,Euro,2016,Resolving insolvency - Score,71.2
+Cyprus,CYP,Euro,2016,Starting a business - Score,89.2
+Cyprus,CYP,Euro,2016,Trading across borders - Score,88.4
+Cyprus,CYP,Euro,2016,Overall Score,78.5
+Cyprus,CYP,Euro,2017,Getting Credit - Score,60
+Cyprus,CYP,Euro,2017,Resolving insolvency - Score,72
+Cyprus,CYP,Euro,2017,Starting a business - Score,91.2
+Cyprus,CYP,Euro,2017,Trading across borders - Score,88.4
+Cyprus,CYP,Euro,2017,Overall Score,77.9
+Cyprus,CYP,Euro,2018,Getting Credit - Score,60
+Cyprus,CYP,Euro,2018,Resolving insolvency - Score,72.2
+Cyprus,CYP,Euro,2018,Starting a business - Score,91.2
+Cyprus,CYP,Euro,2018,Trading across borders - Score,88.4
+Cyprus,CYP,Euro,2018,Overall Score,78
+Cyprus,CYP,Euro,2019,Getting Credit - Score,60
+Cyprus,CYP,Euro,2019,Resolving insolvency - Score,72.3
+Cyprus,CYP,Euro,2019,Starting a business - Score,91.2
+Cyprus,CYP,Euro,2019,Trading across borders - Score,88.4
+Cyprus,CYP,Euro,2019,Overall Score,78
+Cyprus,CYP,Euro,2020,Getting Credit - Score,60
+Cyprus,CYP,Euro,2020,Resolving insolvency - Score,72.5
+Cyprus,CYP,Euro,2020,Starting a business - Score,92
+Cyprus,CYP,Euro,2020,Trading across borders - Score,88.4
+Cyprus,CYP,Euro,2020,Overall Score,78.2
+Estonia,EST,Euro,2016,Getting Credit - Score,70
+Estonia,EST,Euro,2016,Resolving insolvency - Score,62.2
+Estonia,EST,Euro,2016,Starting a business - Score,95.1
+Estonia,EST,Euro,2016,Trading across borders - Score,99.9
+Estonia,EST,Euro,2016,Overall Score,81.8
+Estonia,EST,Euro,2017,Getting Credit - Score,70
+Estonia,EST,Euro,2017,Resolving insolvency - Score,62.3
+Estonia,EST,Euro,2017,Starting a business - Score,95.1
+Estonia,EST,Euro,2017,Trading across borders - Score,99.9
+Estonia,EST,Euro,2017,Overall Score,81.8
+Estonia,EST,Euro,2018,Getting Credit - Score,70
+Estonia,EST,Euro,2018,Resolving insolvency - Score,62.5
+Estonia,EST,Euro,2018,Starting a business - Score,95.2
+Estonia,EST,Euro,2018,Trading across borders - Score,99.9
+Estonia,EST,Euro,2018,Overall Score,81.9
+Estonia,EST,Euro,2019,Getting Credit - Score,70
+Estonia,EST,Euro,2019,Resolving insolvency - Score,62.5
+Estonia,EST,Euro,2019,Starting a business - Score,95.3
+Estonia,EST,Euro,2019,Trading across borders - Score,99.9
+Estonia,EST,Euro,2019,Overall Score,81.9
+Estonia,EST,Euro,2020,Getting Credit - Score,70
+Estonia,EST,Euro,2020,Resolving insolvency - Score,60.1
+Estonia,EST,Euro,2020,Starting a business - Score,95.4
+Estonia,EST,Euro,2020,Trading across borders - Score,99.9
+Estonia,EST,Euro,2020,Overall Score,81.4
+Finland,FIN,Euro,2016,Getting Credit - Score,60
+Finland,FIN,Euro,2016,Resolving insolvency - Score,93.8
+Finland,FIN,Euro,2016,Starting a business - Score,92.4
+Finland,FIN,Euro,2016,Trading across borders - Score,92.4
+Finland,FIN,Euro,2016,Overall Score,84.7
+Finland,FIN,Euro,2017,Getting Credit - Score,60
+Finland,FIN,Euro,2017,Resolving insolvency - Score,93.9
+Finland,FIN,Euro,2017,Starting a business - Score,92.4
+Finland,FIN,Euro,2017,Trading across borders - Score,92.4
+Finland,FIN,Euro,2017,Overall Score,84.7
+Finland,FIN,Euro,2018,Getting Credit - Score,60
+Finland,FIN,Euro,2018,Resolving insolvency - Score,92.8
+Finland,FIN,Euro,2018,Starting a business - Score,92.4
+Finland,FIN,Euro,2018,Trading across borders - Score,92.4
+Finland,FIN,Euro,2018,Overall Score,84.4
+Finland,FIN,Euro,2019,Getting Credit - Score,60
+Finland,FIN,Euro,2019,Resolving insolvency - Score,92.8
+Finland,FIN,Euro,2019,Starting a business - Score,92.4
+Finland,FIN,Euro,2019,Trading across borders - Score,92.4
+Finland,FIN,Euro,2019,Overall Score,84.4
+Finland,FIN,Euro,2020,Getting Credit - Score,60
+Finland,FIN,Euro,2020,Resolving insolvency - Score,92.7
+Finland,FIN,Euro,2020,Starting a business - Score,93.5
+Finland,FIN,Euro,2020,Trading across borders - Score,92.4
+Finland,FIN,Euro,2020,Overall Score,84.7
+France,FRA,Euro,2016,Getting Credit - Score,50
+France,FRA,Euro,2016,Resolving insolvency - Score,76.1
+France,FRA,Euro,2016,Starting a business - Score,93.1
+France,FRA,Euro,2016,Trading across borders - Score,100
+France,FRA,Euro,2016,Overall Score,79.8
+France,FRA,Euro,2017,Getting Credit - Score,50
+France,FRA,Euro,2017,Resolving insolvency - Score,76.6
+France,FRA,Euro,2017,Starting a business - Score,93.3
+France,FRA,Euro,2017,Trading across borders - Score,100
+France,FRA,Euro,2017,Overall Score,80
+France,FRA,Euro,2018,Getting Credit - Score,50
+France,FRA,Euro,2018,Resolving insolvency - Score,73.9
+France,FRA,Euro,2018,Starting a business - Score,93.3
+France,FRA,Euro,2018,Trading across borders - Score,100
+France,FRA,Euro,2018,Overall Score,79.3
+France,FRA,Euro,2019,Getting Credit - Score,50
+France,FRA,Euro,2019,Resolving insolvency - Score,74.1
+France,FRA,Euro,2019,Starting a business - Score,93.3
+France,FRA,Euro,2019,Trading across borders - Score,100
+France,FRA,Euro,2019,Overall Score,79.4
+France,FRA,Euro,2020,Getting Credit - Score,50
+France,FRA,Euro,2020,Resolving insolvency - Score,74.6
+France,FRA,Euro,2020,Starting a business - Score,93.1
+France,FRA,Euro,2020,Trading across borders - Score,100
+France,FRA,Euro,2020,Overall Score,79.4
+Germany,DEU,Euro,2016,Getting Credit - Score,70
+Germany,DEU,Euro,2016,Resolving insolvency - Score,91.9
+Germany,DEU,Euro,2016,Starting a business - Score,82.7
+Germany,DEU,Euro,2016,Trading across borders - Score,91.8
+Germany,DEU,Euro,2016,Overall Score,84.1
+Germany,DEU,Euro,2017,Getting Credit - Score,70
+Germany,DEU,Euro,2017,Resolving insolvency - Score,92.3
+Germany,DEU,Euro,2017,Starting a business - Score,83.5
+Germany,DEU,Euro,2017,Trading across borders - Score,91.8
+Germany,DEU,Euro,2017,Overall Score,84.4
+Germany,DEU,Euro,2018,Getting Credit - Score,70
+Germany,DEU,Euro,2018,Resolving insolvency - Score,90.3
+Germany,DEU,Euro,2018,Starting a business - Score,83.5
+Germany,DEU,Euro,2018,Trading across borders - Score,91.8
+Germany,DEU,Euro,2018,Overall Score,83.9
+Germany,DEU,Euro,2019,Getting Credit - Score,70
+Germany,DEU,Euro,2019,Resolving insolvency - Score,90.1
+Germany,DEU,Euro,2019,Starting a business - Score,83.6
+Germany,DEU,Euro,2019,Trading across borders - Score,91.8
+Germany,DEU,Euro,2019,Overall Score,83.9
+Germany,DEU,Euro,2020,Getting Credit - Score,70
+Germany,DEU,Euro,2020,Resolving insolvency - Score,89.8
+Germany,DEU,Euro,2020,Starting a business - Score,83.7
+Germany,DEU,Euro,2020,Trading across borders - Score,91.8
+Germany,DEU,Euro,2020,Overall Score,83.8
+Greece,GRC,Euro,2016,Getting Credit - Score,45
+Greece,GRC,Euro,2016,Resolving insolvency - Score,54.7
+Greece,GRC,Euro,2016,Starting a business - Score,90.7
+Greece,GRC,Euro,2016,Trading across borders - Score,93.7
+Greece,GRC,Euro,2016,Overall Score,71
+Greece,GRC,Euro,2017,Getting Credit - Score,45
+Greece,GRC,Euro,2017,Resolving insolvency - Score,55.1
+Greece,GRC,Euro,2017,Starting a business - Score,90.7
+Greece,GRC,Euro,2017,Trading across borders - Score,93.7
+Greece,GRC,Euro,2017,Overall Score,71.1
+Greece,GRC,Euro,2018,Getting Credit - Score,45
+Greece,GRC,Euro,2018,Resolving insolvency - Score,54
+Greece,GRC,Euro,2018,Starting a business - Score,92.4
+Greece,GRC,Euro,2018,Trading across borders - Score,93.7
+Greece,GRC,Euro,2018,Overall Score,71.3
+Greece,GRC,Euro,2019,Getting Credit - Score,45
+Greece,GRC,Euro,2019,Resolving insolvency - Score,53.8
+Greece,GRC,Euro,2019,Starting a business - Score,92.4
+Greece,GRC,Euro,2019,Trading across borders - Score,93.7
+Greece,GRC,Euro,2019,Overall Score,71.2
+Greece,GRC,Euro,2020,Getting Credit - Score,45
+Greece,GRC,Euro,2020,Resolving insolvency - Score,53.1
+Greece,GRC,Euro,2020,Starting a business - Score,96
+Greece,GRC,Euro,2020,Trading across borders - Score,93.7
+Greece,GRC,Euro,2020,Overall Score,72
+Ireland,IRL,Euro,2016,Getting Credit - Score,70
+Ireland,IRL,Euro,2016,Resolving insolvency - Score,80
+Ireland,IRL,Euro,2016,Starting a business - Score,92.7
+Ireland,IRL,Euro,2016,Trading across borders - Score,87.2
+Ireland,IRL,Euro,2016,Overall Score,82.5
+Ireland,IRL,Euro,2017,Getting Credit - Score,70
+Ireland,IRL,Euro,2017,Resolving insolvency - Score,80
+Ireland,IRL,Euro,2017,Starting a business - Score,94.4
+Ireland,IRL,Euro,2017,Trading across borders - Score,87.2
+Ireland,IRL,Euro,2017,Overall Score,82.9
+Ireland,IRL,Euro,2018,Getting Credit - Score,70
+Ireland,IRL,Euro,2018,Resolving insolvency - Score,79
+Ireland,IRL,Euro,2018,Starting a business - Score,94.4
+Ireland,IRL,Euro,2018,Trading across borders - Score,87.2
+Ireland,IRL,Euro,2018,Overall Score,82.7
+Ireland,IRL,Euro,2019,Getting Credit - Score,70
+Ireland,IRL,Euro,2019,Resolving insolvency - Score,79.1
+Ireland,IRL,Euro,2019,Starting a business - Score,94.4
+Ireland,IRL,Euro,2019,Trading across borders - Score,87.2
+Ireland,IRL,Euro,2019,Overall Score,82.7
+Ireland,IRL,Euro,2020,Getting Credit - Score,70
+Ireland,IRL,Euro,2020,Resolving insolvency - Score,79.2
+Ireland,IRL,Euro,2020,Starting a business - Score,94.4
+Ireland,IRL,Euro,2020,Trading across borders - Score,87.2
+Ireland,IRL,Euro,2020,Overall Score,82.7
+Italy,ITA,Euro,2016,Getting Credit - Score,45
+Italy,ITA,Euro,2016,Resolving insolvency - Score,76.1
+Italy,ITA,Euro,2016,Starting a business - Score,86.7
+Italy,ITA,Euro,2016,Trading across borders - Score,100
+Italy,ITA,Euro,2016,Overall Score,76.9
+Italy,ITA,Euro,2017,Getting Credit - Score,45
+Italy,ITA,Euro,2017,Resolving insolvency - Score,76.6
+Italy,ITA,Euro,2017,Starting a business - Score,86.7
+Italy,ITA,Euro,2017,Trading across borders - Score,100
+Italy,ITA,Euro,2017,Overall Score,77.1
+Italy,ITA,Euro,2018,Getting Credit - Score,45
+Italy,ITA,Euro,2018,Resolving insolvency - Score,77
+Italy,ITA,Euro,2018,Starting a business - Score,86.8
+Italy,ITA,Euro,2018,Trading across borders - Score,100
+Italy,ITA,Euro,2018,Overall Score,77.2
+Italy,ITA,Euro,2019,Getting Credit - Score,45
+Italy,ITA,Euro,2019,Resolving insolvency - Score,77.3
+Italy,ITA,Euro,2019,Starting a business - Score,86.8
+Italy,ITA,Euro,2019,Trading across borders - Score,100
+Italy,ITA,Euro,2019,Overall Score,77.3
+Italy,ITA,Euro,2020,Getting Credit - Score,45
+Italy,ITA,Euro,2020,Resolving insolvency - Score,77.5
+Italy,ITA,Euro,2020,Starting a business - Score,86.8
+Italy,ITA,Euro,2020,Trading across borders - Score,100
+Italy,ITA,Euro,2020,Overall Score,77.3
+Kosovo,XKX,Euro,2016,Getting Credit - Score,75
+Kosovo,XKX,Euro,2016,Resolving insolvency - Score,20.3
+Kosovo,XKX,Euro,2016,Starting a business - Score,93.1
+Kosovo,XKX,Euro,2016,Trading across borders - Score,87
+Kosovo,XKX,Euro,2016,Overall Score,68.9
+Kosovo,XKX,Euro,2017,Getting Credit - Score,75
+Kosovo,XKX,Euro,2017,Resolving insolvency - Score,20.9
+Kosovo,XKX,Euro,2017,Starting a business - Score,95.5
+Kosovo,XKX,Euro,2017,Trading across borders - Score,92.5
+Kosovo,XKX,Euro,2017,Overall Score,71
+Kosovo,XKX,Euro,2018,Getting Credit - Score,85
+Kosovo,XKX,Euro,2018,Resolving insolvency - Score,63.3
+Kosovo,XKX,Euro,2018,Starting a business - Score,95.7
+Kosovo,XKX,Euro,2018,Trading across borders - Score,92.5
+Kosovo,XKX,Euro,2018,Overall Score,84.1
+Kosovo,XKX,Euro,2019,Getting Credit - Score,85
+Kosovo,XKX,Euro,2019,Resolving insolvency - Score,63.4
+Kosovo,XKX,Euro,2019,Starting a business - Score,95.7
+Kosovo,XKX,Euro,2019,Trading across borders - Score,93.8
+Kosovo,XKX,Euro,2019,Overall Score,84.5
+Kosovo,XKX,Euro,2020,Getting Credit - Score,85
+Kosovo,XKX,Euro,2020,Resolving insolvency - Score,63.5
+Kosovo,XKX,Euro,2020,Starting a business - Score,95.9
+Kosovo,XKX,Euro,2020,Trading across borders - Score,94.2
+Kosovo,XKX,Euro,2020,Overall Score,84.7
+Latvia,LVA,Euro,2016,Getting Credit - Score,75
+Latvia,LVA,Euro,2016,Resolving insolvency - Score,63.4
+Latvia,LVA,Euro,2016,Starting a business - Score,94.1
+Latvia,LVA,Euro,2016,Trading across borders - Score,95.3
+Latvia,LVA,Euro,2016,Overall Score,81.9
+Latvia,LVA,Euro,2017,Getting Credit - Score,85
+Latvia,LVA,Euro,2017,Resolving insolvency - Score,64
+Latvia,LVA,Euro,2017,Starting a business - Score,94.1
+Latvia,LVA,Euro,2017,Trading across borders - Score,95.3
+Latvia,LVA,Euro,2017,Overall Score,84.6
+Latvia,LVA,Euro,2018,Getting Credit - Score,85
+Latvia,LVA,Euro,2018,Resolving insolvency - Score,59.1
+Latvia,LVA,Euro,2018,Starting a business - Score,94.1
+Latvia,LVA,Euro,2018,Trading across borders - Score,95.3
+Latvia,LVA,Euro,2018,Overall Score,83.4
+Latvia,LVA,Euro,2019,Getting Credit - Score,85
+Latvia,LVA,Euro,2019,Resolving insolvency - Score,59.6
+Latvia,LVA,Euro,2019,Starting a business - Score,94.1
+Latvia,LVA,Euro,2019,Trading across borders - Score,95.3
+Latvia,LVA,Euro,2019,Overall Score,83.5
+Latvia,LVA,Euro,2020,Getting Credit - Score,85
+Latvia,LVA,Euro,2020,Resolving insolvency - Score,59.8
+Latvia,LVA,Euro,2020,Starting a business - Score,94.1
+Latvia,LVA,Euro,2020,Trading across borders - Score,95.3
+Latvia,LVA,Euro,2020,Overall Score,83.6
+Lithuania,LTU,Euro,2016,Getting Credit - Score,70
+Lithuania,LTU,Euro,2016,Resolving insolvency - Score,45.7
+Lithuania,LTU,Euro,2016,Starting a business - Score,92.9
+Lithuania,LTU,Euro,2016,Trading across borders - Score,97.7
+Lithuania,LTU,Euro,2016,Overall Score,76.6
+Lithuania,LTU,Euro,2017,Getting Credit - Score,70
+Lithuania,LTU,Euro,2017,Resolving insolvency - Score,46.7
+Lithuania,LTU,Euro,2017,Starting a business - Score,93
+Lithuania,LTU,Euro,2017,Trading across borders - Score,97.7
+Lithuania,LTU,Euro,2017,Overall Score,76.9
+Lithuania,LTU,Euro,2018,Getting Credit - Score,70
+Lithuania,LTU,Euro,2018,Resolving insolvency - Score,46.9
+Lithuania,LTU,Euro,2018,Starting a business - Score,93.1
+Lithuania,LTU,Euro,2018,Trading across borders - Score,97.7
+Lithuania,LTU,Euro,2018,Overall Score,76.9
+Lithuania,LTU,Euro,2019,Getting Credit - Score,70
+Lithuania,LTU,Euro,2019,Resolving insolvency - Score,46.9
+Lithuania,LTU,Euro,2019,Starting a business - Score,93.2
+Lithuania,LTU,Euro,2019,Trading across borders - Score,97.8
+Lithuania,LTU,Euro,2019,Overall Score,77
+Lithuania,LTU,Euro,2020,Getting Credit - Score,70
+Lithuania,LTU,Euro,2020,Resolving insolvency - Score,46.7
+Lithuania,LTU,Euro,2020,Starting a business - Score,93.3
+Lithuania,LTU,Euro,2020,Trading across borders - Score,97.8
+Lithuania,LTU,Euro,2020,Overall Score,77
+Luxembourg,LUX,Euro,2016,Getting Credit - Score,15
+Luxembourg,LUX,Euro,2016,Resolving insolvency - Score,45.4
+Luxembourg,LUX,Euro,2016,Starting a business - Score,88.4
+Luxembourg,LUX,Euro,2016,Trading across borders - Score,100
+Luxembourg,LUX,Euro,2016,Overall Score,62.2
+Luxembourg,LUX,Euro,2017,Getting Credit - Score,15
+Luxembourg,LUX,Euro,2017,Resolving insolvency - Score,45.4
+Luxembourg,LUX,Euro,2017,Starting a business - Score,88.7
+Luxembourg,LUX,Euro,2017,Trading across borders - Score,100
+Luxembourg,LUX,Euro,2017,Overall Score,62.3
+Luxembourg,LUX,Euro,2018,Getting Credit - Score,15
+Luxembourg,LUX,Euro,2018,Resolving insolvency - Score,45.4
+Luxembourg,LUX,Euro,2018,Starting a business - Score,88.8
+Luxembourg,LUX,Euro,2018,Trading across borders - Score,100
+Luxembourg,LUX,Euro,2018,Overall Score,62.3
+Luxembourg,LUX,Euro,2019,Getting Credit - Score,15
+Luxembourg,LUX,Euro,2019,Resolving insolvency - Score,45.5
+Luxembourg,LUX,Euro,2019,Starting a business - Score,88.7
+Luxembourg,LUX,Euro,2019,Trading across borders - Score,100
+Luxembourg,LUX,Euro,2019,Overall Score,62.3
+Luxembourg,LUX,Euro,2020,Getting Credit - Score,15
+Luxembourg,LUX,Euro,2020,Resolving insolvency - Score,45.5
+Luxembourg,LUX,Euro,2020,Starting a business - Score,88.8
+Luxembourg,LUX,Euro,2020,Trading across borders - Score,100
+Luxembourg,LUX,Euro,2020,Overall Score,62.3
+Malta,MLT,Euro,2016,Getting Credit - Score,10
+Malta,MLT,Euro,2016,Resolving insolvency - Score,38.5
+Malta,MLT,Euro,2016,Starting a business - Score,78
+Malta,MLT,Euro,2016,Trading across borders - Score,88.9
+Malta,MLT,Euro,2016,Overall Score,53.9
+Malta,MLT,Euro,2017,Getting Credit - Score,30
+Malta,MLT,Euro,2017,Resolving insolvency - Score,39.1
+Malta,MLT,Euro,2017,Starting a business - Score,80.2
+Malta,MLT,Euro,2017,Trading across borders - Score,88.9
+Malta,MLT,Euro,2017,Overall Score,59.6
+Malta,MLT,Euro,2018,Getting Credit - Score,30
+Malta,MLT,Euro,2018,Resolving insolvency - Score,38.1
+Malta,MLT,Euro,2018,Starting a business - Score,84.8
+Malta,MLT,Euro,2018,Trading across borders - Score,88.9
+Malta,MLT,Euro,2018,Overall Score,60.4
+Malta,MLT,Euro,2019,Getting Credit - Score,35
+Malta,MLT,Euro,2019,Resolving insolvency - Score,38.1
+Malta,MLT,Euro,2019,Starting a business - Score,84.9
+Malta,MLT,Euro,2019,Trading across borders - Score,88.9
+Malta,MLT,Euro,2019,Overall Score,61.7
+Malta,MLT,Euro,2020,Getting Credit - Score,35
+Malta,MLT,Euro,2020,Resolving insolvency - Score,38.3
+Malta,MLT,Euro,2020,Starting a business - Score,88.2
+Malta,MLT,Euro,2020,Trading across borders - Score,88.9
+Malta,MLT,Euro,2020,Overall Score,62.6
+Montenegro,MNE,Euro,2016,Getting Credit - Score,85
+Montenegro,MNE,Euro,2016,Resolving insolvency - Score,65.1
+Montenegro,MNE,Euro,2016,Starting a business - Score,86.6
+Montenegro,MNE,Euro,2016,Trading across borders - Score,91.9
+Montenegro,MNE,Euro,2016,Overall Score,82.2
+Montenegro,MNE,Euro,2017,Getting Credit - Score,85
+Montenegro,MNE,Euro,2017,Resolving insolvency - Score,65.2
+Montenegro,MNE,Euro,2017,Starting a business - Score,86.6
+Montenegro,MNE,Euro,2017,Trading across borders - Score,91.9
+Montenegro,MNE,Euro,2017,Overall Score,82.2
+Montenegro,MNE,Euro,2018,Getting Credit - Score,85
+Montenegro,MNE,Euro,2018,Resolving insolvency - Score,65.6
+Montenegro,MNE,Euro,2018,Starting a business - Score,86.6
+Montenegro,MNE,Euro,2018,Trading across borders - Score,91.9
+Montenegro,MNE,Euro,2018,Overall Score,82.3
+Montenegro,MNE,Euro,2019,Getting Credit - Score,85
+Montenegro,MNE,Euro,2019,Resolving insolvency - Score,66
+Montenegro,MNE,Euro,2019,Starting a business - Score,86.7
+Montenegro,MNE,Euro,2019,Trading across borders - Score,91.9
+Montenegro,MNE,Euro,2019,Overall Score,82.4
+Montenegro,MNE,Euro,2020,Getting Credit - Score,85
+Montenegro,MNE,Euro,2020,Resolving insolvency - Score,66.1
+Montenegro,MNE,Euro,2020,Starting a business - Score,86.7
+Montenegro,MNE,Euro,2020,Trading across borders - Score,91.9
+Montenegro,MNE,Euro,2020,Overall Score,82.4
+Netherlands,NLD,Euro,2016,Getting Credit - Score,40
+Netherlands,NLD,Euro,2016,Resolving insolvency - Score,83.8
+Netherlands,NLD,Euro,2016,Starting a business - Score,94.3
+Netherlands,NLD,Euro,2016,Trading across borders - Score,100
+Netherlands,NLD,Euro,2016,Overall Score,79.5
+Netherlands,NLD,Euro,2017,Getting Credit - Score,40
+Netherlands,NLD,Euro,2017,Resolving insolvency - Score,84
+Netherlands,NLD,Euro,2017,Starting a business - Score,94.3
+Netherlands,NLD,Euro,2017,Trading across borders - Score,100
+Netherlands,NLD,Euro,2017,Overall Score,79.6
+Netherlands,NLD,Euro,2018,Getting Credit - Score,45
+Netherlands,NLD,Euro,2018,Resolving insolvency - Score,84.2
+Netherlands,NLD,Euro,2018,Starting a business - Score,94.3
+Netherlands,NLD,Euro,2018,Trading across borders - Score,100
+Netherlands,NLD,Euro,2018,Overall Score,80.9
+Netherlands,NLD,Euro,2019,Getting Credit - Score,45
+Netherlands,NLD,Euro,2019,Resolving insolvency - Score,84.3
+Netherlands,NLD,Euro,2019,Starting a business - Score,94.3
+Netherlands,NLD,Euro,2019,Trading across borders - Score,100
+Netherlands,NLD,Euro,2019,Overall Score,80.9
+Netherlands,NLD,Euro,2020,Getting Credit - Score,45
+Netherlands,NLD,Euro,2020,Resolving insolvency - Score,84.4
+Netherlands,NLD,Euro,2020,Starting a business - Score,94.3
+Netherlands,NLD,Euro,2020,Trading across borders - Score,100
+Netherlands,NLD,Euro,2020,Overall Score,80.9
+Portugal,PRT,Euro,2016,Getting Credit - Score,45
+Portugal,PRT,Euro,2016,Resolving insolvency - Score,80.6
+Portugal,PRT,Euro,2016,Starting a business - Score,91
+Portugal,PRT,Euro,2016,Trading across borders - Score,100
+Portugal,PRT,Euro,2016,Overall Score,79.2
+Portugal,PRT,Euro,2017,Getting Credit - Score,45
+Portugal,PRT,Euro,2017,Resolving insolvency - Score,81.2
+Portugal,PRT,Euro,2017,Starting a business - Score,91
+Portugal,PRT,Euro,2017,Trading across borders - Score,100
+Portugal,PRT,Euro,2017,Overall Score,79.3
+Portugal,PRT,Euro,2018,Getting Credit - Score,45
+Portugal,PRT,Euro,2018,Resolving insolvency - Score,79.7
+Portugal,PRT,Euro,2018,Starting a business - Score,90.9
+Portugal,PRT,Euro,2018,Trading across borders - Score,100
+Portugal,PRT,Euro,2018,Overall Score,78.9
+Portugal,PRT,Euro,2019,Getting Credit - Score,45
+Portugal,PRT,Euro,2019,Resolving insolvency - Score,80
+Portugal,PRT,Euro,2019,Starting a business - Score,90.9
+Portugal,PRT,Euro,2019,Trading across borders - Score,100
+Portugal,PRT,Euro,2019,Overall Score,79
+Portugal,PRT,Euro,2020,Getting Credit - Score,45
+Portugal,PRT,Euro,2020,Resolving insolvency - Score,80.2
+Portugal,PRT,Euro,2020,Starting a business - Score,90.9
+Portugal,PRT,Euro,2020,Trading across borders - Score,100
+Portugal,PRT,Euro,2020,Overall Score,79
+San Marino,SMR,Euro,2016,Getting Credit - Score,5
+San Marino,SMR,Euro,2016,Resolving insolvency - Score,39.2
+San Marino,SMR,Euro,2016,Starting a business - Score,83.7
+San Marino,SMR,Euro,2016,Trading across borders - Score,97.5
+San Marino,SMR,Euro,2016,Overall Score,56.3
+San Marino,SMR,Euro,2017,Getting Credit - Score,5
+San Marino,SMR,Euro,2017,Resolving insolvency - Score,39.5
+San Marino,SMR,Euro,2017,Starting a business - Score,83.8
+San Marino,SMR,Euro,2017,Trading across borders - Score,97.5
+San Marino,SMR,Euro,2017,Overall Score,56.5
+San Marino,SMR,Euro,2018,Getting Credit - Score,5
+San Marino,SMR,Euro,2018,Resolving insolvency - Score,39.5
+San Marino,SMR,Euro,2018,Starting a business - Score,83.6
+San Marino,SMR,Euro,2018,Trading across borders - Score,97.5
+San Marino,SMR,Euro,2018,Overall Score,56.4
+San Marino,SMR,Euro,2019,Getting Credit - Score,30
+San Marino,SMR,Euro,2019,Resolving insolvency - Score,41.2
+San Marino,SMR,Euro,2019,Starting a business - Score,83.7
+San Marino,SMR,Euro,2019,Trading across borders - Score,97.5
+San Marino,SMR,Euro,2019,Overall Score,63.1
+San Marino,SMR,Euro,2020,Getting Credit - Score,30
+San Marino,SMR,Euro,2020,Resolving insolvency - Score,41.1
+San Marino,SMR,Euro,2020,Starting a business - Score,87.3
+San Marino,SMR,Euro,2020,Trading across borders - Score,97.5
+San Marino,SMR,Euro,2020,Overall Score,64
+Slovak Republic,SVK,Euro,2016,Getting Credit - Score,70
+Slovak Republic,SVK,Euro,2016,Resolving insolvency - Score,70
+Slovak Republic,SVK,Euro,2016,Starting a business - Score,81.8
+Slovak Republic,SVK,Euro,2016,Trading across borders - Score,100
+Slovak Republic,SVK,Euro,2016,Overall Score,80.5
+Slovak Republic,SVK,Euro,2017,Getting Credit - Score,70
+Slovak Republic,SVK,Euro,2017,Resolving insolvency - Score,70.5
+Slovak Republic,SVK,Euro,2017,Starting a business - Score,81.9
+Slovak Republic,SVK,Euro,2017,Trading across borders - Score,100
+Slovak Republic,SVK,Euro,2017,Overall Score,80.6
+Slovak Republic,SVK,Euro,2018,Getting Credit - Score,70
+Slovak Republic,SVK,Euro,2018,Resolving insolvency - Score,66.1
+Slovak Republic,SVK,Euro,2018,Starting a business - Score,82
+Slovak Republic,SVK,Euro,2018,Trading across borders - Score,100
+Slovak Republic,SVK,Euro,2018,Overall Score,79.5
+Slovak Republic,SVK,Euro,2019,Getting Credit - Score,70
+Slovak Republic,SVK,Euro,2019,Resolving insolvency - Score,66.9
+Slovak Republic,SVK,Euro,2019,Starting a business - Score,82
+Slovak Republic,SVK,Euro,2019,Trading across borders - Score,100
+Slovak Republic,SVK,Euro,2019,Overall Score,79.7
+Slovak Republic,SVK,Euro,2020,Getting Credit - Score,70
+Slovak Republic,SVK,Euro,2020,Resolving insolvency - Score,65.5
+Slovak Republic,SVK,Euro,2020,Starting a business - Score,84.8
+Slovak Republic,SVK,Euro,2020,Trading across borders - Score,100
+Slovak Republic,SVK,Euro,2020,Overall Score,80.1
+Slovenia,SVN,Euro,2016,Getting Credit - Score,35
+Slovenia,SVN,Euro,2016,Resolving insolvency - Score,83.4
+Slovenia,SVN,Euro,2016,Starting a business - Score,94.5
+Slovenia,SVN,Euro,2016,Trading across borders - Score,100
+Slovenia,SVN,Euro,2016,Overall Score,78.2
+Slovenia,SVN,Euro,2017,Getting Credit - Score,35
+Slovenia,SVN,Euro,2017,Resolving insolvency - Score,84
+Slovenia,SVN,Euro,2017,Starting a business - Score,94.6
+Slovenia,SVN,Euro,2017,Trading across borders - Score,100
+Slovenia,SVN,Euro,2017,Overall Score,78.4
+Slovenia,SVN,Euro,2018,Getting Credit - Score,45
+Slovenia,SVN,Euro,2018,Resolving insolvency - Score,83.7
+Slovenia,SVN,Euro,2018,Starting a business - Score,94.7
+Slovenia,SVN,Euro,2018,Trading across borders - Score,100
+Slovenia,SVN,Euro,2018,Overall Score,80.9
+Slovenia,SVN,Euro,2019,Getting Credit - Score,45
+Slovenia,SVN,Euro,2019,Resolving insolvency - Score,83.7
+Slovenia,SVN,Euro,2019,Starting a business - Score,92.9
+Slovenia,SVN,Euro,2019,Trading across borders - Score,100
+Slovenia,SVN,Euro,2019,Overall Score,80.4
+Slovenia,SVN,Euro,2020,Getting Credit - Score,45
+Slovenia,SVN,Euro,2020,Resolving insolvency - Score,84.4
+Slovenia,SVN,Euro,2020,Starting a business - Score,93
+Slovenia,SVN,Euro,2020,Trading across borders - Score,100
+Slovenia,SVN,Euro,2020,Overall Score,80.6
+Spain,ESP,Euro,2016,Getting Credit - Score,60
+Spain,ESP,Euro,2016,Resolving insolvency - Score,75.8
+Spain,ESP,Euro,2016,Starting a business - Score,86.4
+Spain,ESP,Euro,2016,Trading across borders - Score,100
+Spain,ESP,Euro,2016,Overall Score,80.6
+Spain,ESP,Euro,2017,Getting Credit - Score,60
+Spain,ESP,Euro,2017,Resolving insolvency - Score,79.6
+Spain,ESP,Euro,2017,Starting a business - Score,86.7
+Spain,ESP,Euro,2017,Trading across borders - Score,100
+Spain,ESP,Euro,2017,Overall Score,81.6
+Spain,ESP,Euro,2018,Getting Credit - Score,60
+Spain,ESP,Euro,2018,Resolving insolvency - Score,78.7
+Spain,ESP,Euro,2018,Starting a business - Score,86.7
+Spain,ESP,Euro,2018,Trading across borders - Score,100
+Spain,ESP,Euro,2018,Overall Score,81.4
+Spain,ESP,Euro,2019,Getting Credit - Score,60
+Spain,ESP,Euro,2019,Resolving insolvency - Score,79.1
+Spain,ESP,Euro,2019,Starting a business - Score,86.9
+Spain,ESP,Euro,2019,Trading across borders - Score,100
+Spain,ESP,Euro,2019,Overall Score,81.5
+Spain,ESP,Euro,2020,Getting Credit - Score,60
+Spain,ESP,Euro,2020,Resolving insolvency - Score,79.2
+Spain,ESP,Euro,2020,Starting a business - Score,86.9
+Spain,ESP,Euro,2020,Trading across borders - Score,100
+Spain,ESP,Euro,2020,Overall Score,81.5
