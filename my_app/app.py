@@ -1,13 +1,9 @@
-from flask import Flask
+from flask import Flask, render_template
 
 from my_app import create_app
+import config
 
-app = create_app()
-
-
-@app.route('/')
-def index():
-    return 'This is the home page for my_flask_app'
+app = create_app(config.DevelopmentConfig)
 
 
 if __name__ == '__main__':
