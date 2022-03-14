@@ -16,6 +16,23 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Dashboard</a>
                 </li>
+   {# Shows/hides login, signup and logout depending on status #}
+                {% if current_user.is_anonymous %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for("auth.login") }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for("auth.signup") }}">Sign up</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for("main.index") }}">MyProfile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for("auth.logout") }}">Logout</a>
+                    </li>
+                {% endif %}
+
             </ul>
         </div>
     </div>
