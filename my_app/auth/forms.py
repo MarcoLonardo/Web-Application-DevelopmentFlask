@@ -33,3 +33,4 @@ class LoginForm(FlaskForm):
             raise ValidationError('No account found with that email address.')
         if not user.check_password(password.data):
             raise ValidationError('Incorrect password.')
+

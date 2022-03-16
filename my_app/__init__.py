@@ -1,3 +1,6 @@
+from pathlib import Path
+
+import pandas as pd
 from flask import Flask
 import dash
 import dash_bootstrap_components as dbc
@@ -5,10 +8,12 @@ from flask.helpers import get_root_path
 from flask_login import LoginManager, login_required
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import CSRFProtect
+from flask_uploads import UploadSet, IMAGES, configure_uploads
 
 db = SQLAlchemy()
 login_manager = LoginManager()
 csrf = CSRFProtect()
+photos = UploadSet('photos', IMAGES)
 
 
 def create_app(config_class_name):
@@ -23,13 +28,15 @@ def create_app(config_class_name):
     login_manager.init_app(app)
     login_manager.login_view = 'auth.login'
     csrf.init_app(app)
+    configure_uploads(app, photos)
     csrf._exempt_views.add('dash.dash.dispatch')
     register_dashapp(app)
 
     with app.app_context():
         # Import Dash Application
-        from my_app.models import User
+        from my_app.models import User, Profile, Region
         db.create_all()
+        add_noc_data(db)
 
     from my_app.main.routes import main_bp
     app.register_blueprint(main_bp)
@@ -38,6 +45,21 @@ def create_app(config_class_name):
     app.register_blueprint(auth_bp)
 
     return app
+
+def add_noc_data(db_name):
+    """ Adds the list of countries to the NOCRegion table to the database.
+    :param db_name: the SQLite database initialised for the Flask app
+    :type db_name: SQLAlchemy object
+    """
+    filename = Path(__file__).parent.joinpath('dash_app', 'Data', 'EU_regions.csv')
+    df = pd.read_csv(filename, usecols=['region'])
+    df.dropna(axis=0, inplace=True)
+    df.drop_duplicates(subset=['region'], keep='first', inplace=True)
+    df.reset_index(drop=True, inplace=True)
+    df['id'] = df.index
+    df.to_sql(name='region', con=db.engine, if_exists='replace', index=False)
+
+
 
 def register_dashapp(app):
     from my_app.dash_app import layout

@@ -9,6 +9,7 @@ class User(db.Model, UserMixin):
     last_name = db.Column(db.Text, nullable=False)
     email = db.Column(db.Text, unique=True, nullable=False)
     password = db.Column(db.Text, nullable=False)
+    profile = db.relationship("Profile", backref=db.backref('user'))
 
     def __repr__(self):
         return f"{self.id} {self.first_name} {self.last_name} {self.email} {self.password}"
@@ -18,3 +19,22 @@ class User(db.Model, UserMixin):
 
     def check_password(self, password):
         return check_password_hash(self.password, password)
+
+class Profile(db.Model):
+    __tablename__ = "profile"
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.Text, nullable=False, unique=True)
+    bio = db.Column(db.Text)
+    photo = db.Column(db.Text)
+    region_id = db.Column(db.Integer, db.ForeignKey('region.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+
+
+    def __repr__(self):
+        return f"{self.id} {self.first_name} {self.last_name} {self.email} {self.password}"
+
+
+class Region(db.Model):
+    __tablename__ = "region"
+    id = db.Column(db.Integer, primary_key=True)
+    region = db.Column(db.Text)
