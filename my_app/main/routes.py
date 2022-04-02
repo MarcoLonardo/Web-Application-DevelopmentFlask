@@ -5,24 +5,32 @@ from flask_login import current_user, login_required
 from my_app import photos, db
 from my_app.main.forms import ProfileForm
 from my_app.models import Profile, User, Region
+from datetime import datetime, timedelta
+import requests
 
 main_bp = Blueprint('main', __name__)
 
-@main_bp.route('/')
-def index():
-    img_list = []
-    for filename in os.listdir('static/img'):
-        img_list.append(filename)
-    img_df = pd.DataFrame(img_list, columns=['filename'])
-    img_df['year'] = img_df['filename'].str[:4]
-    img_df['event'] = img_df['filename'].str[5:-4]
+@main_bp.route('/', defaults={'name': 'Anonymous'})
+@main_bp.route('/<name>')
+def index(name):
     if not current_user.is_anonymous:
         name = current_user.first_name
-        flash(f'Hello {name}. ')
-    img_df.sort_values(by=['year'], inplace=True)
-    img_df.reset_index(inplace=True, drop=True)
-    images = img_df.values.tolist()
-    return render_template('index.html', title='Home page', images=images)
+        flash(f'Hello {name}, you are logged in ')
+    api_key = 'dafb9803e862434b8c84ce12752cf1da'
+    search = 'EU Economics'
+    # 'to' date and optional time for the newest article allowed.
+    newest = datetime.today().strftime('%Y-%m-%d')
+    # 'from' date and optional time for the oldest article allowed in ISO 8601 format e.g. 2021-02-20
+    oldest = (datetime.today() - timedelta(hours=3)).strftime('%Y-%m-%d')
+    sort_by = 'publishedAt'
+    url = f'https://newsapi.org/v2/everything?q={search}&from={oldest}&to={newest}&sortBy={sort_by}'
+    response = requests.get(url, headers={
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer {}'.format(api_key)
+    })
+    news = response.json()
+    return render_template('index.html', title='EU Commission Home page', name=name, news=news)
+
 
 @main_bp.route('/profile', methods=['GET', 'POST'])
 @login_required
@@ -32,8 +40,6 @@ def profile():
         return redirect(url_for('main.update_profile'))
     else:
         return redirect(url_for('main.create_profile'))
-
-
 
 @main_bp.route('/create_profile', methods=['GET', 'POST'])
 @login_required
@@ -66,6 +72,7 @@ def update_profile():
         if 'photo' in request.files:
             filename = photos.save(request.files['photo'])
             profile.photo = filename
+        profile.region = form.region_id.data
         profile.bio = form.bio.data
         profile.username = form.username.data
         db.session.commit()
@@ -96,3 +103,6 @@ def display_profiles(username):
             url = url_for('static', filename='img/' + result.photo)
             urls.append(url)
     return render_template('display_profile.html', profiles=zip(results, urls))
+
+
+

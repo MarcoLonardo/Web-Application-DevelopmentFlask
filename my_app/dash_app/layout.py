@@ -4,7 +4,6 @@ from dash import html
 import dash_bootstrap_components as dbc
 import pandas as pd
 import plotly_express as px
-import plotly.io as pio
 
 
 # Reading the third version of the prepared dataset with different data structure for visualization 3

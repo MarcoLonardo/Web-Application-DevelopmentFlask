@@ -11,9 +11,6 @@
                     <a class="nav-link" href="{{ url_for("main.index") }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href='/my_profile'>Profiles</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="/dashboard/">Dashboard</a>
                 </li>
    {# Shows/hides login, signup and logout depending on status #}
@@ -26,7 +23,7 @@
                     </li>
                 {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for("main.profile") }}">MyProfile</a>
+                        <a class="nav-link" href='{{ url_for("main.profile") }}'>Update My Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for("auth.logout") }}">Logout</a>

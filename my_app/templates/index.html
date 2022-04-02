@@ -1,5 +1,10 @@
 {% extends 'layout.html' %}
 {% block content %}
-    <h1>{{ title }}</h1>
-    <p>Welcome to the home page.</p>
+<h1>{{ title }}</h1>
+<p>Welcome to the landing page {{ name }}</p>
+<br>
+<h2>Latest EU Economics News</h2>
+{% for article in news['articles'] %}
+<p><a href="{{ article.url|e }}">{{ article.title|e }}</a></p>
+{% endfor %}
 {% endblock %}

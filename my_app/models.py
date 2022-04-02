@@ -29,7 +29,6 @@ class Profile(db.Model):
     region_id = db.Column(db.Integer, db.ForeignKey('region.id'))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
-
     def __repr__(self):
         return f"{self.id} {self.first_name} {self.last_name} {self.email} {self.password}"
 
@@ -38,3 +37,4 @@ class Region(db.Model):
     __tablename__ = "region"
     id = db.Column(db.Integer, primary_key=True)
     region = db.Column(db.Text)
+

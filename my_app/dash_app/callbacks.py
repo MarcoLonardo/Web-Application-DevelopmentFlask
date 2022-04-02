@@ -4,7 +4,6 @@ from dash import dash, html
 import dash_bootstrap_components as dbc
 import pandas as pd
 import plotly_express as px
-import plotly.io as pio
 
 # Reading and preparing the dataset for the choropleth (visualization 1).
 file_path = Path(__file__).parent.joinpath('Data', 'prepared_dataset.csv')
