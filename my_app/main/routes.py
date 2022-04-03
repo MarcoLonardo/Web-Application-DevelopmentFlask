@@ -21,7 +21,7 @@ def index(name):
     # 'to' date and optional time for the newest article allowed.
     newest = datetime.today().strftime('%Y-%m-%d')
     # 'from' date and optional time for the oldest article allowed in ISO 8601 format e.g. 2021-02-20
-    oldest = (datetime.today() - timedelta(hours=3)).strftime('%Y-%m-%d')
+    oldest = (datetime.today() - timedelta(hours=1)).strftime('%Y-%m-%d')
     sort_by = 'publishedAt'
     url = f'https://newsapi.org/v2/everything?q={search}&from={oldest}&to={newest}&sortBy={sort_by}'
     response = requests.get(url, headers={
