@@ -1,6 +1,6 @@
 from pathlib import Path
-from dash import dcc, Input, Output
-from dash import dash, html
+from dash import Input, Output
+from dash import html
 import dash_bootstrap_components as dbc
 import pandas as pd
 import plotly_express as px
@@ -40,12 +40,12 @@ df_icicle = df_icicle.drop('Year', 1)
 # https://stackoverflow.com/questions/29517072/add-column-to-dataframe-with-constant-value Accessed 05/02/2022
 df_icicle['Currency Unit'] = 'Europe'
 
-
 fig3 = px.icicle(df_icicle, path=['Currency Unit', 'Country Name'], values="Score", color="Score",
                  color_continuous_scale='BrBG', range_color=[65, 85], custom_data=['Country Name'])
 
 fig3.update_layout(
     uniformtext=dict(minsize=50), margin=dict(t=50, l=25, r=25, b=25))
+
 
 def register_callbacks(dash_app):
     @dash_app.callback(

@@ -26,6 +26,7 @@ def get_safe_redirect():
         return url
     return '/'
 
+
 @login_manager.user_loader
 def load_user(user_id):
     """ Takes a user ID and returns a user object or None if the user does not exist"""
@@ -33,11 +34,13 @@ def load_user(user_id):
         return User.query.get(user_id)
     return None
 
+
 @login_manager.unauthorized_handler
 def unauthorized():
     """Redirect unauthorized users to Login page."""
     flash('You must be logged in to view that page.')
     return redirect(url_for('auth.login'))
+
 
 @auth_bp.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -56,6 +59,7 @@ def signup():
         return redirect(url_for('main.index'))
     return render_template('signup.html', title='Sign Up', form=form)
 
+
 @auth_bp.route('/login', methods=['GET', 'POST'])
 def login():
     login_form = LoginForm()
@@ -67,6 +71,7 @@ def login():
             return abort(400)
         return redirect(next or url_for('main.index'))
     return render_template('login.html', title='Login', form=login_form)
+
 
 @auth_bp.route('/logout')
 @login_required

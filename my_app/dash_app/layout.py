@@ -5,7 +5,6 @@ import dash_bootstrap_components as dbc
 import pandas as pd
 import plotly_express as px
 
-
 # Reading the third version of the prepared dataset with different data structure for visualization 3
 file_path3 = Path(__file__).parent.joinpath('Data', 'prepared_dataset_v3.csv')
 df1 = pd.read_csv(file_path3)
@@ -22,14 +21,11 @@ df_icicle = df_icicle.drop('Year', 1)
 # https://stackoverflow.com/questions/29517072/add-column-to-dataframe-with-constant-value Accessed 05/02/2022
 df_icicle['Currency Unit'] = 'Europe'
 
-
 fig3 = px.icicle(df_icicle, path=['Currency Unit', 'Country Name'], values="Score", color="Score",
                  color_continuous_scale='BrBG', range_color=[65, 85], custom_data=['Country Name'])
 
 fig3.update_layout(
     uniformtext=dict(minsize=50), margin=dict(t=50, l=25, r=25, b=25))
-
-
 
 layout = dbc.Container(fluid=True, children=[
     html.Br(),

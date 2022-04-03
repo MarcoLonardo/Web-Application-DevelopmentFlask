@@ -1,14 +1,15 @@
-import os
-import pandas as pd
+from datetime import datetime, timedelta
+
+import requests
 from flask import Blueprint, render_template, flash, redirect, url_for, request
 from flask_login import current_user, login_required
+
 from my_app import photos, db
 from my_app.main.forms import ProfileForm
 from my_app.models import Profile, User, Region
-from datetime import datetime, timedelta
-import requests
 
 main_bp = Blueprint('main', __name__)
+
 
 @main_bp.route('/', defaults={'name': 'Anonymous'})
 @main_bp.route('/<name>')
@@ -25,8 +26,8 @@ def index(name):
     sort_by = 'publishedAt'
     url = f'https://newsapi.org/v2/everything?q={search}&from={oldest}&to={newest}&sortBy={sort_by}'
     response = requests.get(url, headers={
-    'Content-Type': 'application/json',
-    'Authorization': 'Bearer {}'.format(api_key)
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer {}'.format(api_key)
     })
     news = response.json()
     return render_template('index.html', title='EU Commission Home page', name=name, news=news)
@@ -40,6 +41,7 @@ def profile():
         return redirect(url_for('main.update_profile'))
     else:
         return redirect(url_for('main.create_profile'))
+
 
 @main_bp.route('/create_profile', methods=['GET', 'POST'])
 @login_required
@@ -60,6 +62,7 @@ def create_profile():
         db.session.commit()
         return redirect(url_for('main.display_profiles', username=p.username))
     return render_template('profile.html', form=form)
+
 
 @main_bp.route('/update_profile', methods=['GET', 'POST'])
 @login_required
@@ -103,6 +106,3 @@ def display_profiles(username):
             url = url_for('static', filename='img/' + result.photo)
             urls.append(url)
     return render_template('display_profile.html', profiles=zip(results, urls))
-
-
-

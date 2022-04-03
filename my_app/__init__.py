@@ -29,14 +29,14 @@ def create_app(config_class_name):
     login_manager.login_view = 'auth.login'
     csrf.init_app(app)
     configure_uploads(app, photos)
-    csrf._exempt_views.add('dash.dash.dispatch')
+    csrf.exempt_views.add('dash.dash.dispatch')
     register_dashapp(app)
 
     with app.app_context():
         # Import Dash Application
         from my_app.models import User, Profile, Region
         db.create_all()
-        add_noc_data(db)
+        add_noc_data()
 
     from my_app.main.routes import main_bp
     app.register_blueprint(main_bp)
@@ -46,11 +46,8 @@ def create_app(config_class_name):
 
     return app
 
-def add_noc_data(db_name):
-    """ Adds the list of countries to the NOCRegion table to the database.
-    :param db_name: the SQLite database initialised for the Flask app
-    :type db_name: SQLAlchemy object
-    """
+
+def add_noc_data():
     filename = Path(__file__).parent.joinpath('dash_app', 'Data', 'EU_regions.csv')
     df = pd.read_csv(filename, usecols=['region'])
     df.dropna(axis=0, inplace=True)
@@ -60,7 +57,6 @@ def add_noc_data(db_name):
     df.to_sql(name='region', con=db.engine, if_exists='replace', index=False)
 
 
-
 def register_dashapp(app):
     from my_app.dash_app import layout
     from my_app.dash_app.callbacks import register_callbacks
@@ -68,11 +64,11 @@ def register_dashapp(app):
     meta_viewport = {"name": "viewport", "content": "width=device-width, initial-scale=1, shrink-to-fit=no"}
 
     dashapp = dash.Dash(__name__,
-                         server=app,
-                         url_base_pathname='/dashboard/',
-                         assets_folder=get_root_path(__name__) + '/dashboard/assets/',
-                         meta_tags=[meta_viewport],
-                         external_stylesheets=[dbc.themes.LUX])
+                        server=app,
+                        url_base_pathname='/dashboard/',
+                        assets_folder=get_root_path(__name__) + '/dashboard/assets/',
+                        meta_tags=[meta_viewport],
+                        external_stylesheets=[dbc.themes.LUX])
 
     with app.app_context():
         dashapp.title = 'Dashboard'
