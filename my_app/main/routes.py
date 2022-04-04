@@ -75,7 +75,6 @@ def update_profile():
         if 'photo' in request.files:
             filename = photos.save(request.files['photo'])
             profile.photo = filename
-        profile.region = form.region_id.data
         profile.bio = form.bio.data
         profile.username = form.username.data
         db.session.commit()

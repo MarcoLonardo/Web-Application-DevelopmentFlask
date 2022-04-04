@@ -39,3 +39,5 @@ class Region(db.Model):
     __tablename__ = "region"
     id = db.Column(db.Integer, primary_key=True)
     region = db.Column(db.Text)
+    profile = db.relationship("Profile", backref=db.backref('region'))
+
